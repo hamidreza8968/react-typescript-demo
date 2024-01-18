@@ -7,6 +7,7 @@ import Status from "./components/Status/Status";
 import Heading from "./components/Heading/Heading";
 import Oscar from "./components/Oscar/Oscar";
 import Button from "./components/Button/Button";
+import Input from "./components/Input/Input";
 
 function App() {
     const personName = {
@@ -38,6 +39,7 @@ function App() {
                 <Heading>Oscar goes to Leonardo Dicaprio</Heading>
             </Oscar>
             <Button handleClick={(e , id) => console.log("Button clicked!" , e , id)}/>
+            <Input value="" handleChange={(e) => console.log(e)}/>
         </div>
     );
 }
