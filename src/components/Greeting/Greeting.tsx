@@ -2,14 +2,15 @@
 
 type GreetingProps = {
     name: string,
-    messageNum: number,
+    messageNum ?: number,
     isLoggedIn: boolean,
 }
 
-function Greeting(prop: GreetingProps) {
+function Greeting(props: GreetingProps) {
+    const {messageNum = 0} = props;
     return (
         <div>
-            <h2>Welcome {prop.isLoggedIn ? `${prop.name}! You have ${prop.messageNum} unread messages.` : "guest!"}</h2>
+            <h2>Welcome {props.isLoggedIn ? `${props.name}! You have ${props.messageNum} unread messages.` : "guest!"}</h2>
         </div>
     )
 }

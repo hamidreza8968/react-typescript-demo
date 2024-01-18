@@ -5,29 +5,40 @@ import Person from "./components/Person/Person";
 import PersonList from "./components/PersonList/PersonList";
 import Status from "./components/Status/Status";
 import Heading from "./components/Heading/Heading";
+import Oscar from "./components/Oscar/Oscar";
 
 function App() {
     const personName = {
-        first:"Hamidreza",
-        last:"Seyedabadi",
+        first: "Hamidreza",
+        last: "Seyedabadi",
     };
-    const nameList=[
-        {first:"Hamidreza",
-         last:"Seyedabadi"},
-        {first:"Mansoureh",
-        last:"Hedayat"},
-        {first:"Farhad",
-         last:"Mehryari"}
+    const nameList = [
+        {
+            first: "Hamidreza",
+            last: "Seyedabadi"
+        },
+        {
+            first: "Mansoureh",
+            last: "Hedayat"
+        },
+        {
+            first: "Farhad",
+            last: "Mehryari"
+        }
     ];
-  return (
-    <div className="App">
-      <Greeting name="Hamid" messageNum={8} isLoggedIn={false}/>
-      <Person name={personName}/>
-      <PersonList names={nameList}/>
-      <Status status="error"/>
-      <Heading>Placeholder text</Heading>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Greeting name="Hamid" messageNum={9} isLoggedIn={true}/>
+            <Person name={personName}/>
+            <PersonList names={nameList}/>
+            <Status status="error"/>
+            <Heading>Placeholder text</Heading>
+            <Oscar>
+                <Heading>Oscar goes to Leonardo Dicaprio</Heading>
+            </Oscar>
+
+        </div>
+    );
 }
 
 export default App;

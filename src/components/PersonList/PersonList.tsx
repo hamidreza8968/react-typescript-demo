@@ -4,10 +4,10 @@ type PersonListProps= {
         last:string,
     }[]
 }
-function PersonList(prop:PersonListProps) {
+function PersonList(props:PersonListProps) {
     return(
         <div>
-            {prop.names.map((name , index) => <h2 key={index}>{name.first} {name.last}</h2>)}
+            {props.names.map((name , index) => <h2 key={index}>{name.first} {name.last}</h2>)}
         </div>
     )
 }

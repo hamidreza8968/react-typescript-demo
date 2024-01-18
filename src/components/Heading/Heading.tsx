@@ -1,9 +1,9 @@
 type HeadingProps = {
     children:string,
 }
-function Heading(prop:HeadingProps) {
+function Heading(props:HeadingProps) {
     return(
-        <h2>{prop.children}</h2>
+        <h2>{props.children}</h2>
     )
 }
 export default Heading;
